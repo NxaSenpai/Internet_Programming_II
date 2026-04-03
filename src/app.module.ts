@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { ReceiptsModule } from './receipts/receipts.module';
 import { Receipt } from './database/entities/receipts.entities';
 import { ConfigModule } from '@nestjs/config';
+import { NotificationsModule } from './notifications/notifications.module';
 
 @Module({
   
@@ -22,6 +23,7 @@ import { ConfigModule } from '@nestjs/config';
       logging: false,
     }),
     ReceiptsModule,
+    NotificationsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
