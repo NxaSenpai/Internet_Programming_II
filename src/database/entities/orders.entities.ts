@@ -1,8 +1,8 @@
-import { Entity, Column, PrimaryColumn } from "typeorm";
+import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('orders')
 export class Order {
-    @PrimaryColumn('uuid')
+    @PrimaryGeneratedColumn('uuid')
     orderId: string;
 
     @Column({ type: 'varchar', length: 255 })
